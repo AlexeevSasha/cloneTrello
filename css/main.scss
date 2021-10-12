@@ -7,8 +7,171 @@
 }
 
 body {
-  opacity: 0.6;
   background-image: linear-gradient(#f4f5fa 0.8px, transparent 0.8px),
     linear-gradient(to right, #f4f5fa 0.8px, #ffffff 0.8px);
   background-size: 16px 16px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
+
+.boards {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 15px;
+    padding: 15px;
+    background-color: rgb(102, 175, 218);
+    transition: 0.3s all ease;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.title {
+  padding: 10px;
+
+  &:focus {
+    outline: none;
+    border-radius: 2px;
+    background-color: rgb(129, 194, 231);
+  }
+}
+
+.list {
+  min-height: 40px;
+
+  &__item {
+    background-color: #daeffc;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 4px 0;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+    outline: none;
+    border: none;
+  }
+}
+
+.form {
+  display: none;
+  border-radius: 3px;
+  margin-top: auto;
+
+  .textarea {
+    resize: none;
+    height: 60px;
+    border-radius: 3px;
+    border: none;
+    background: white;
+    padding: 10px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  padding: 15px 0 5px;
+}
+.add__item-btn,
+.cancel__item-btn {
+  background: #25aa42;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  height: 35px;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.add__item-btn {
+  margin-right: 10px;
+  &:hover {
+    background: #11922d;
+  }
+}
+
+.cancel__item-btn {
+  background: #d82424;
+  &:hover {
+    background: #c01f1f;
+  }
+}
+
+.add__btn {
+  height: 40px;
+  background: #59a1cc;
+  border-radius: 3px;
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  color: #d6eefc;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  span {
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background: #4f91b8;
+    color: white;
+  }
+}
+
+.button {
+  height: 40px;
+  background-color: rgb(67, 131, 216);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: rgb(40, 100, 179);
+  }
+  &:active {
+    bottom: 48px;
+  }
 }

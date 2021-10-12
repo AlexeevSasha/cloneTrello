@@ -8,8 +8,220 @@
 }
 
 body {
-  opacity: 0.6;
   background-image: linear-gradient(#f4f5fa 0.8px, transparent 0.8px), linear-gradient(to right, #f4f5fa 0.8px, #ffffff 0.8px);
   background-size: 16px 16px;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
+
+.boards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 15px;
+}
+
+.boards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 15px;
+  padding: 15px;
+  background-color: #66afda;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  padding: 10px;
+}
+
+.title:focus {
+  outline: none;
+  border-radius: 2px;
+  background-color: #81c2e7;
+}
+
+.list {
+  min-height: 40px;
+}
+
+.list__item {
+  background-color: #daeffc;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 4px 0;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+
+.form {
+  display: none;
+  border-radius: 3px;
+  margin-top: auto;
+}
+
+.form .textarea {
+  resize: none;
+  height: 60px;
+  border-radius: 3px;
+  border: none;
+  background: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.form .textarea:focus {
+  outline: none;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0 5px;
+}
+
+.add__item-btn,
+.cancel__item-btn {
+  background: #25aa42;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  height: 35px;
+  color: white;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.add__item-btn:active,
+.cancel__item-btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.add__item-btn {
+  margin-right: 10px;
+}
+
+.add__item-btn:hover {
+  background: #11922d;
+}
+
+.cancel__item-btn {
+  background: #d82424;
+}
+
+.cancel__item-btn:hover {
+  background: #c01f1f;
+}
+
+.add__btn {
+  height: 40px;
+  background: #59a1cc;
+  border-radius: 3px;
+  margin-top: 15px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  color: #d6eefc;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.add__btn span {
+  font-size: 25px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.add__btn:hover {
+  background: #4f91b8;
+  color: white;
+}
+
+.button {
+  height: 40px;
+  background-color: #4383d8;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #2864b3;
+}
+
+.button:active {
+  bottom: 48px;
 }
 /*# sourceMappingURL=main.css.map */
