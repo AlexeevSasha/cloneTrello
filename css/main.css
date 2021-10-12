@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  opacity: 0.6;
+  background-image: linear-gradient(#f4f5fa 0.8px, transparent 0.8px), linear-gradient(to right, #f4f5fa 0.8px, #ffffff 0.8px);
+  background-size: 16px 16px;
+}
+/*# sourceMappingURL=main.css.map */

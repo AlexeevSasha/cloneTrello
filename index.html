@@ -14,6 +14,29 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="app">
+      <div class="boards">
+        <div class="boards__item">
+          <span class="title" contenteditable="true">Введите название</span>
+          <div class="list">
+            <div class="list__item" draggable="true">Стартовая карточка</div>
+          </div>
+
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Введи названия карточки"
+            ></textarea>
+            <div class="buttons">
+              <button class="add__item-btn">Добавить картчоку</button>
+              <button class="cancel__item-btn">Отмена</button>
+            </div>
+
+            <div class="add__btn"><span>+</span>Добавить карточку</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
